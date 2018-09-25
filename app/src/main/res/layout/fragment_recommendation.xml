@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewmodel"
+            type="clouddish.mvvm.ndot.Recommendations.RecommendationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_10dp"
+            android:theme="@style/TextLabel">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mobilenumber"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:maxLength="@integer/mobilenummaxlength"
+                android:singleLine="true"
+                android:text="@={viewmodel.mobileNumber}"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/txt_16sp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnGetData"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pad_50dp"
+            android:layout_margin="@dimen/pad_10dp"
+            android:background="@color/colorBlue"
+            android:text="@string/getdata"
+            android:textColor="@color/colorPrimary" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</layout>

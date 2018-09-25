@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MVVM - DataBinding</string>
+    <string name="mobilenumber">Mobile Number</string>
+    <string name="getdata">Get Data</string>
+    <string name="entermobilenum">Please enter your mobile number</string>
+    <string name="txt_servernotreach">Please check your internet connection</string>
+    <string name="txt_addserverurl">Please add your server url and customise your pojo class according to your requirement</string>
+</resources>
